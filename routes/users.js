@@ -7,6 +7,10 @@ router.use((req, res, next) => {
   next()
 })
 
+router.use((req, res, next) => {
+  !req.headers['x-auth'] ? next('router') : next();
+})
+
 /* GET users listing. */
 router.get('/', (req, res, next) => {
   res.send(req);
