@@ -3,4 +3,6 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
-  input(type="button", value="Get users" onclick='window.api("/users/123123", "GET")')
+  p
+    a(href="/users") go to users
+  input(type="button", value="Get users ajax" onclick='window.api("/users/123123")')

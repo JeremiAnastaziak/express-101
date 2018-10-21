@@ -1,4 +1,4 @@
-window.api = function(url, method, payload) {
+window.api = function(url, method = 'GET', payload) {
   return fetch(url, {
     method,
     body: JSON.stringify(payload)
